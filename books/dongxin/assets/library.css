@@ -51,9 +51,20 @@ p { margin: 0 0 14px; }
 .tile {
   background: var(--panel);
   border: 1px solid var(--line);
-  padding: 16px;
+  padding: 18px 18px 20px;
 }
-.tile strong { display: block; margin-bottom: 4px; font-size: 18px; }
+.tile .label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.tile strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 30px;
+  line-height: 1.15;
+}
 .tile span { color: var(--muted); font-size: 14px; }
 .chapters {
   columns: 2;
