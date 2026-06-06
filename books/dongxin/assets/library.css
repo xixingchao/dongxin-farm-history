@@ -1,0 +1,77 @@
+:root {
+  color-scheme: light;
+  --ink: #20231f;
+  --muted: #626b63;
+  --line: #d9d4ca;
+  --paper: #fbfaf6;
+  --panel: #ffffff;
+  --accent: #7b3f28;
+  --accent-2: #245f73;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  line-height: 1.75;
+}
+a { color: var(--accent-2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 32px 24px 56px; }
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: rgba(251,250,246,.94);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.topbar .wrap { padding-top: 12px; padding-bottom: 12px; display: flex; gap: 18px; align-items: center; justify-content: space-between; }
+.brand { font-weight: 700; letter-spacing: 0; }
+.nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; }
+.hero { padding-top: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+h1 { margin: 0 0 12px; font-size: clamp(34px, 5vw, 58px); line-height: 1.15; letter-spacing: 0; }
+h2 { margin: 38px 0 14px; font-size: 24px; line-height: 1.35; letter-spacing: 0; }
+p { margin: 0 0 14px; }
+.lead { max-width: 760px; color: var(--muted); font-size: 18px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 7px 14px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  text-decoration: none;
+  font-weight: 700;
+}
+.button.primary { background: var(--accent); color: #fffaf2; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.tile {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 16px;
+}
+.tile strong { display: block; margin-bottom: 4px; font-size: 18px; }
+.tile span { color: var(--muted); font-size: 14px; }
+.chapters {
+  columns: 2;
+  column-gap: 42px;
+  padding-left: 1.4em;
+}
+.chapters li { break-inside: avoid; margin-bottom: 5px; }
+.note {
+  border-top: 1px solid var(--line);
+  margin-top: 42px;
+  padding-top: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+@media (max-width: 760px) {
+  .wrap { padding-left: 18px; padding-right: 18px; }
+  .topbar .wrap { display: block; }
+  .nav { margin-top: 8px; }
+  .grid { grid-template-columns: 1fr; }
+  .chapters { columns: 1; }
+}
